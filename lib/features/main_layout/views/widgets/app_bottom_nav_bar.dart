@@ -1,0 +1,27 @@
+import 'package:flutter/material.dart';
+
+class AppBottomNavBar extends StatelessWidget {
+  final int currentIndex;
+  final ValueChanged<int> onTap;
+
+  const AppBottomNavBar({
+    super.key,
+    required this.currentIndex,
+    required this.onTap,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return BottomNavigationBar(
+      currentIndex: currentIndex,
+      onTap: onTap,
+      items: const [
+        BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+        BottomNavigationBarItem(icon: Icon(Icons.school), label: 'Directory'),
+        BottomNavigationBarItem(icon: Icon(Icons.compare), label: 'Compare'),
+        BottomNavigationBarItem(icon: Icon(Icons.chat), label: 'AI'),
+        BottomNavigationBarItem(icon: Icon(Icons.favorite), label: 'Match'),
+      ],
+    );
+  }
+}
