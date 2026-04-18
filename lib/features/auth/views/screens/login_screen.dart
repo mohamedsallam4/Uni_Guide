@@ -6,7 +6,6 @@ import 'package:bloc_statemanagement/core/widgets/app_button.dart';
 import 'package:bloc_statemanagement/core/widgets/app_text_field.dart';
 import 'package:bloc_statemanagement/core/widgets/app_loading_widget.dart';
 import 'package:bloc_statemanagement/core/widgets/app_error_widget.dart';
-import 'package:bloc_statemanagement/core/utils/validators.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -54,14 +53,14 @@ class _LoginScreenState extends State<LoginScreen> {
                     controller: _emailController,
                     label: 'Email',
                     keyboardType: TextInputType.emailAddress,
-                    validator: Validators.validateEmail,
+                    // validator: Validators.validateEmail,
                   ),
                   const SizedBox(height: 16),
                   AppTextField(
                     controller: _passwordController,
                     label: 'Password',
                     obscureText: true,
-                    validator: Validators.validatePassword,
+                    // validator: Validators.validatePassword,
                   ),
                   const SizedBox(height: 24),
                   AppButton(
