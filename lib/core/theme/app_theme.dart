@@ -5,15 +5,15 @@ import 'app_text_styles.dart';
 class AppTheme {
   static ThemeData lightTheme = ThemeData(
     primaryColor: AppColors.primary,
-    scaffoldBackgroundColor: AppColors.background,
+    // scaffoldBackgroundColor: AppColors.background,
     colorScheme: const ColorScheme.light(
       primary: AppColors.primary,
       secondary: AppColors.secondary,
-      surface: AppColors.surface,
-      error: AppColors.error,
-      onPrimary: AppColors.onPrimary,
-      onSecondary: AppColors.onSecondary,
-      onSurface: AppColors.onSurface,
+      // surface: AppColors.surface,
+      // error: AppColors.error,
+      // onPrimary: AppColors.onPrimary,
+      // onSecondary: AppColors.onSecondary,
+      // onSurface: AppColors.onSurface,
       onError: AppColors.onError,
     ),
     textTheme: const TextTheme(
@@ -27,7 +27,7 @@ class AppTheme {
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
         backgroundColor: AppColors.primary,
-        foregroundColor: AppColors.onPrimary,
+        // foregroundColor: AppColors.onPrimary,
         textStyle: AppTextStyles.button,
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
         shape: RoundedRectangleBorder(
