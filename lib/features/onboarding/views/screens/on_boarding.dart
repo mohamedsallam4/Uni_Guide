@@ -1,5 +1,7 @@
+import 'package:bloc_statemanagement/core/functions/custom_navigation.dart';
 import 'package:bloc_statemanagement/core/theme/app_colors.dart';
 import 'package:bloc_statemanagement/core/widgets/custom_svg.dart';
+import 'package:bloc_statemanagement/features/Auth/Login/views/login_view.dart';
 import 'package:bloc_statemanagement/features/onboarding/views/screens/page1_view.dart';
 import 'package:bloc_statemanagement/features/onboarding/views/screens/page2_view.dart';
 import 'package:bloc_statemanagement/features/onboarding/views/screens/page3_view.dart';
@@ -44,8 +46,7 @@ class OnboardingView extends StatelessWidget {
                         children: [
                           GestureDetector(
                             onTap: () {
-                              onbordingcubit.controller.jumpToPage(2);
-                              onbordingcubit.changePage(2);
+                              customPushAndRemoveUntil(context, const LoginView());
                             },
                             child: Text(
                               "تخطي",
@@ -82,7 +83,7 @@ class OnboardingView extends StatelessWidget {
                                   curve: Curves.fastOutSlowIn,
                                 );
                               } else {
-                                // هنا تروح للـ Home
+                               customPushAndRemoveUntil(context, const LoginView());
                               }
                             },
                             child: Container(
