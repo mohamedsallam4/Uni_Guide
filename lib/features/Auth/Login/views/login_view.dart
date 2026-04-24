@@ -14,7 +14,7 @@ import '../../../../core/functions/custom_snack_bar.dart';
 import '../../../../core/helper/cache/cache_helper.dart';
 import '../../../../core/theme/app_colors.dart';
 import '../../../../core/widgets/app_text_field.dart';
-import '../../../home/views/home_view.dart';
+import '../../../layout_view/views/layout_view.dart';
 import '../../../setup_profile/views/setupPprofile_view.dart';
 import '../../forget_pass/views/forget_pass_view.dart';
 import '../../register/views/register_view.dart';
@@ -57,7 +57,7 @@ class LoginView extends StatelessWidget {
                       CacheHelper().getData(key: "profile_completed_$userId") ?? false;
 
                   if (isProfileCompleted) {
-                    customPushReplacement(context, const HomeView());
+                    customPushReplacement(context, const LayoutView());
                   } else {
                     customPushReplacement(context, const SetupProfileView());
                   }

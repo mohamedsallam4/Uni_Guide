@@ -8,7 +8,7 @@ import '../../../../core/api/api_key.dart';
 import '../../../../core/constants/asset_constants.dart';
 import '../../../../core/functions/custom_navigation.dart';
 import '../../../../core/helper/cache/cache_helper.dart';
-import '../../../home/views/home_view.dart';
+import '../../../layout_view/views/layout_view.dart';
 class SplachView extends StatefulWidget {
   const SplachView({super.key});
 
@@ -31,7 +31,7 @@ class _SplachViewState extends State<SplachView> {
           CacheHelper().getData(key: ApiKeys.isLogged) ?? false;
 
       if (isLogged) {
-        customPushReplacement(context, const HomeView());
+        customPushReplacement(context, const LayoutView());
       } else {
         customPushReplacement(context, const OnboardingView());
       }

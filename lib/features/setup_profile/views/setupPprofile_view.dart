@@ -12,7 +12,7 @@ import '../../../core/functions/custom_navigation.dart';
 import '../../../core/helper/cache/cache_helper.dart';
 import '../../../core/theme/app_colors.dart';
 import '../../../core/widgets/app_button.dart';
-import '../../home/views/home_view.dart';
+import '../../layout_view/views/layout_view.dart';
 
 class SetupProfileView extends StatefulWidget {
   const SetupProfileView({super.key});
@@ -161,7 +161,7 @@ class _SetupProfileViewState extends State<SetupProfileView> {
                     value: selectedGovernorate,
                   );
                   if (!context.mounted) return;
-                  customPushReplacement(context, const HomeView());
+                  customPushReplacement(context, const LayoutView());
                 },
               ),
               SizedBox(height: 45.h),
